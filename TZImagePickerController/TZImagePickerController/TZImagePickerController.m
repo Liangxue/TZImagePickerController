@@ -155,7 +155,7 @@
     albumPickerVc.columnNumber = columnNumber;
     self = [super initWithRootViewController:albumPickerVc];
     if (self) {
-        self.maxImagesCount = maxImagesCount > 0 ? maxImagesCount : 9; // Default is 9 / 默认最大可选9张图片
+        self.maxImagesCount = maxImagesCount >= 9 ? 9 : maxImagesCount; // Default is 9 / 默认最大可选9张图片
         self.pickerDelegate = delegate;
         self.selectedAssets = [NSMutableArray array];
         
